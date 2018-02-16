@@ -9,7 +9,7 @@ namespace proyecto_prueba.Processes
     {
         public Bills SalesRecordMetodo()
         {
-            //string sNumber ="";
+            Console.WriteLine("Registration of New Sales");
             Console.WriteLine("BillNumber");
             string bNumber = Console.ReadLine();
 

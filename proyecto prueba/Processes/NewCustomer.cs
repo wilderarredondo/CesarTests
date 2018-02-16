@@ -9,6 +9,7 @@ namespace proyecto_prueba.Processes
     {
         public Customers NewCustomerMetodo()
         {
+            Console.WriteLine("Registration of New Customer");
             Console.WriteLine("CustomerId");
             int sCustomerId = Convert.ToInt32(Console.ReadLine());
 

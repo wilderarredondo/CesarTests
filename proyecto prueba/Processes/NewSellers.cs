@@ -10,6 +10,7 @@ namespace proyecto_prueba.Processes
 
         public Sellers NewSellersMetodo()
         {
+            Console.WriteLine("Registration of New Sellers");
             Console.WriteLine("SellerId");
             int sSeleerId = Convert.ToInt32( Console.ReadLine());
 

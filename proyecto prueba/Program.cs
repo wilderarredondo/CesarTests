@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using proyecto_prueba.Entities;
 using proyecto_prueba.Processes;
+using proyecto_prueba.Reports;
 
 namespace proyecto_prueba
 {
@@ -12,10 +13,19 @@ namespace proyecto_prueba
         {
             SalesRecord objSalesRecord = new SalesRecord();
             NewCustomer objNewCustomer = new NewCustomer();
+            NewSellers objNewSeller = new NewSellers();
+            NewProducts objNewProduct = new NewProducts();
+
+            //Reports
+            SalesRpt objSalesRpt = new SalesRpt();
+            CustomersRpt objCustomersRpt = new CustomersRpt();
+            ProductsRpt objProductsRpt = new ProductsRpt();
 
             List<Products> products = new List<Products>();
             Bills BillsObj = new Bills();
             Customers CustomerObj = new Customers();
+            Sellers SellersObj = new Sellers();
+            Products ProductObj = new Products();
 
             Products cola = new Products();
             cola.ProductId = 1;
@@ -40,8 +50,14 @@ namespace proyecto_prueba
 
             BillsObj = objSalesRecord.SalesRecordMetodo();
             CustomerObj = objNewCustomer.NewCustomerMetodo();
+            SellersObj = objNewSeller.NewSellersMetodo();
+            ProductObj = objNewProduct.NewProductsMetodo();
 
-            Console.WriteLine(CustomerObj.CustomerBirthdate );
+            objSalesRpt.RptTotalSales(BillsObj);
+            objCustomersRpt.SeniorCustomers(CustomerObj);
+            objProductsRpt.StockMin(ProductObj);
+
+//            Console.WriteLine(CustomerObj.CustomerBirthdate );
 
         }
     }
