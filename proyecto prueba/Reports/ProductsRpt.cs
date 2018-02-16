@@ -12,10 +12,9 @@ namespace proyecto_prueba.Reports
             Console.WriteLine("Minimum Stock Report");
             Console.WriteLine("");
 
-            if (objProducts.StockMinimo < objProducts.StockMinimo )
+            if (objProducts.Stock < objProducts.StockMinimo )
             {
 
-                Console.WriteLine("       ");
                 Console.Write("ProductId:");
                 Console.Write("       ");
                 Console.Write("ProductName:");
@@ -36,6 +35,8 @@ namespace proyecto_prueba.Reports
 
                 Console.Write(objProducts.ToString());
                 Console.WriteLine("       ");
+                Console.WriteLine("  ");
+                Console.WriteLine("  ");
             }
             else
             {

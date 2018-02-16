@@ -24,15 +24,10 @@ namespace proyecto_prueba.Reports
                 Console.Write("       ");
                 Console.Write("CustomerBirthdate:");
                 Console.WriteLine("");
-/*
-                objCustomers.ForEach(item =>
-                {
-                    Console.WriteLine(item);
-                }
-            );
-             */
-*/
+
                 Console.Write(objCustomers.ToString());
+                Console.WriteLine("  ");
+                Console.WriteLine("  ");
             }
             else
             {

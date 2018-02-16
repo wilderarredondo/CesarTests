@@ -13,6 +13,8 @@ namespace proyecto_prueba.Reports
             Console.WriteLine("");
             Console.Write("Total Sales Amount:");
             Console.Write(objBills.BillTotal);
+            Console.WriteLine("  ");
+            Console.WriteLine("  ");
         }
     }
 }
