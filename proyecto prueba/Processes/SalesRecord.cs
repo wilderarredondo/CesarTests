@@ -19,14 +19,10 @@ namespace proyecto_prueba.Processes
             Console.WriteLine("BillTotal");
             string bTotal = Console.ReadLine();
 
-            //List<List<string>> Lista = new List<List<string>>();
-
             Bills obj = new Bills();
             obj.BillNumber =Convert.ToInt32(bNumber);
             obj.BillDate = bDate;
             obj.BillTotal = bTotal;
-
-            //BillsList.Add(obj);
 
             return obj;
 

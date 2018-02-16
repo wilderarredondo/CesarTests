@@ -23,15 +23,6 @@ namespace proyecto_prueba.Reports
                 Console.Write("       ");
                 Console.Write("ProductStockMinimo:");
                 Console.WriteLine("       ");
-               /* Console.WriteLine("       ");
-                Console.Write(objProducts.ProductId);
-                Console.Write("       ");
-                Console.Write(objProducts.Name);
-                Console.Write("       ");
-                Console.Write(objProducts.Stock);
-                Console.Write("       ");
-                Console.Write(objProducts.StockMinimo);
-*/
 
                 Console.Write(objProducts.ToString());
                 Console.WriteLine("       ");
