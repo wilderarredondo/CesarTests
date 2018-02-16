@@ -7,22 +7,25 @@ namespace proyecto_prueba.Processes
 {
     public class SalesRecord
     {
-        public Bills SalesRecordMetodo()
+        public Bills Register()
         {
             Console.WriteLine("Registration of New Sales");
             Console.WriteLine("BillNumber");
-            string bNumber = Console.ReadLine();
+            if (!int.TryParse(Console.ReadLine(), out int Number))
+            {
+                return null;
+            }
 
             Console.WriteLine("BillDate");
-            string bDate = Console.ReadLine();
+            string Fecha = Console.ReadLine();
 
             Console.WriteLine("BillTotal");
-            string bTotal = Console.ReadLine();
+            string Total = Console.ReadLine();
 
             Bills obj = new Bills();
-            obj.BillNumber =Convert.ToInt32(bNumber);
-            obj.BillDate = bDate;
-            obj.BillTotal = bTotal;
+            obj.BillNumber =Number;
+            obj.BillDate = Fecha;
+            obj.BillTotal = Total;
 
             return obj;
 

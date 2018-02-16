@@ -8,23 +8,27 @@ namespace proyecto_prueba.Processes
     public class NewSellers
     {
 
-        public Sellers NewSellersMetodo()
+        public Sellers Register()
         {
             Console.WriteLine("Registration of New Sellers");
             Console.WriteLine("SellerId");
-            int sSeleerId = Convert.ToInt32( Console.ReadLine());
+
+            if (!int.TryParse(Console.ReadLine(), out int SeleerId))
+            {
+                return null;
+            }
 
             Console.WriteLine("SellerName");
-            string sSellerName = Console.ReadLine();
+            string SellerName = Console.ReadLine();
 
             Console.WriteLine("SellerComision");
-            string sSellerComision = Console.ReadLine();
+            string SellerComision = Console.ReadLine();
 
             Sellers SellObj = new Sellers();
 
-            SellObj.SellerId = sSeleerId;
-            SellObj.SellerName = sSellerName;
-            SellObj.SellerComision = sSellerComision;
+            SellObj.SellerId = SeleerId;
+            SellObj.SellerName = SellerName;
+            SellObj.SellerComision = SellerComision;
 
             return SellObj;
         }

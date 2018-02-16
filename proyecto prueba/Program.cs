@@ -16,7 +16,6 @@ namespace proyecto_prueba
             NewSellers objNewSeller = new NewSellers();
             NewProducts objNewProduct = new NewProducts();
 
-            //Reports
             SalesRpt objSalesRpt = new SalesRpt();
             CustomersRpt objCustomersRpt = new CustomersRpt();
             ProductsRpt objProductsRpt = new ProductsRpt();
@@ -42,22 +41,21 @@ namespace proyecto_prueba
                     Console.WriteLine(item);
                 }
             );
-            //products.Where
+
             int num1 =2;
             bool isBetween = num1 >= 5 & num1 <= 10;
             bool isBetween2 = num1.Between(5, 10);
             int a =2;
 
-            BillsObj = objSalesRecord.SalesRecordMetodo();
-            CustomerObj = objNewCustomer.NewCustomerMetodo();
-            SellersObj = objNewSeller.NewSellersMetodo();
-            ProductObj = objNewProduct.NewProductsMetodo();
+            BillsObj = objSalesRecord.Register();
+            CustomerObj = objNewCustomer.Register();
+            SellersObj = objNewSeller.Register();
+            ProductObj = objNewProduct.Register();
 
             objSalesRpt.RptTotalSales(BillsObj);
             objCustomersRpt.SeniorCustomers(CustomerObj);
             objProductsRpt.StockMin(ProductObj);
 
-//            Console.WriteLine(CustomerObj.CustomerBirthdate );
 
         }
     }

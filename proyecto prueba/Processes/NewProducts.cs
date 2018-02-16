@@ -7,26 +7,32 @@ namespace proyecto_prueba.Processes
 {
     public class NewProducts
     {
-        public Products NewProductsMetodo()
+        public Products Register()
         {
             Console.WriteLine("Registration of New Products");
             Console.WriteLine("ProductId");
-            int sProductId = Convert.ToInt32(Console.ReadLine());
+            int ProductId = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("ProductName");
-            string sProductName = Console.ReadLine();
+            string ProductName = Console.ReadLine();
 
             Console.WriteLine("ProductStock");
-            int sProductStock = Convert.ToInt32(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int ProductStock))
+            {
+                return null;
+            }
 
             Console.WriteLine("ProductStockMinimo");
-            int sProductStockMinimo = Convert.ToInt32(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int ProductStockMinimo))
+            {
+                return null;
+            }
 
             Products ProdObj = new Products();
-            ProdObj.ProductId = sProductId;
-            ProdObj.Name = sProductName;
-            ProdObj.Stock = sProductStock;
-            ProdObj.StockMinimo = sProductStockMinimo; ;
+            ProdObj.ProductId = ProductId;
+            ProdObj.Name = ProductName;
+            ProdObj.Stock = ProductStock;
+            ProdObj.StockMinimo = ProductStockMinimo; ;
 
             return ProdObj;
         }

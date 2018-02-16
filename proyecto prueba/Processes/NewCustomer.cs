@@ -7,31 +7,38 @@ namespace proyecto_prueba.Processes
 {
     public class NewCustomer
     {
-        public Customers NewCustomerMetodo()
+        public Customers Register()
         {
             Console.WriteLine("Registration of New Customer");
             Console.WriteLine("CustomerId");
-            int sCustomerId = Convert.ToInt32(Console.ReadLine());
+
+            if (!int.TryParse(Console.ReadLine(), out int CustomerId))
+            {
+                return null;
+            }
 
             Console.WriteLine("CustomerName");
-            string sCustomerName = Console.ReadLine();
+            string CustomerName = Console.ReadLine();
 
             Console.WriteLine("CustomerAddress");
-            string sCustomerAddress = Console.ReadLine();
+            string CustomerAddress = Console.ReadLine();
 
             Console.WriteLine("CustomerAge");
-            int sCustomerAge = Convert.ToInt32(Console.ReadLine());
+            int CustomerAge = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("CustomerBirthdate") ;
-            string sCustomerBirthdate1 = Console.ReadLine();
-            DateTime sCustomerBirthdate = Convert.ToDateTime(sCustomerBirthdate1);
+
+            if (!DateTime.TryParse(Console.ReadLine(), out DateTime CustomerBirthdate))
+            {
+                return null;
+            }
 
             Customers CustObj = new Customers();
-            CustObj.CustomerId = sCustomerId;
-            CustObj.CustomerName = sCustomerName;
-            CustObj.CustomerAddress = sCustomerAddress;
-            CustObj.CustomerAge = sCustomerAge;
-            CustObj.CustomerBirthdate = sCustomerBirthdate;
+            CustObj.CustomerId = CustomerId;
+            CustObj.CustomerName = CustomerName;
+            CustObj.CustomerAddress = CustomerAddress;
+            CustObj.CustomerAge = CustomerAge;
+            CustObj.CustomerBirthdate = CustomerBirthdate;
 
             return CustObj;
         }
