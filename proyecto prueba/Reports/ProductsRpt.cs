@@ -9,31 +9,40 @@ namespace proyecto_prueba.Reports
     {
         public void StockMin(Products objProducts)
         {
-            Console.WriteLine("Report ");
+            Console.WriteLine("Minimum Stock Report");
             Console.WriteLine("");
 
             if (objProducts.StockMinimo < objProducts.StockMinimo )
             {
+
+                Console.WriteLine("       ");
                 Console.Write("ProductId:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("ProductName:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("ProductStock:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("ProductStockMinimo:");
-/*
-                objCustomers.ForEach(item =>
-                {
-                    Console.WriteLine(item);
-                }
-            );
-             */
+                Console.WriteLine("       ");
+               /* Console.WriteLine("       ");
+                Console.Write(objProducts.ProductId);
+                Console.Write("       ");
+                Console.Write(objProducts.Name);
+                Console.Write("       ");
+                Console.Write(objProducts.Stock);
+                Console.Write("       ");
+                Console.Write(objProducts.StockMinimo);
+*/
 
                 Console.Write(objProducts.ToString());
+                Console.WriteLine("       ");
             }
             else
             {
                 Console.Write("No data");
+                Console.WriteLine("       ");
+                Console.WriteLine("       ");
+                Console.WriteLine("       ");
             }
         }
     }

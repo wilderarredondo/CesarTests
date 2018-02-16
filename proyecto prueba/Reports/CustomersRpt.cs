@@ -15,14 +15,15 @@ namespace proyecto_prueba.Reports
             if (objCustomers.CustomerAge>55)
             {
                 Console.Write("CustomerId:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("CustomerName:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("CustomerAddress:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("CustomerAge:");
-                Console.WriteLine("       ");
+                Console.Write("       ");
                 Console.Write("CustomerBirthdate:");
+                Console.WriteLine("");
 /*
                 objCustomers.ForEach(item =>
                 {
@@ -30,12 +31,14 @@ namespace proyecto_prueba.Reports
                 }
             );
              */
-
+*/
                 Console.Write(objCustomers.ToString());
             }
             else
             {
                 Console.Write("No data");
+                Console.WriteLine("  ");
+                Console.WriteLine("  ");
             }
         }
     }
